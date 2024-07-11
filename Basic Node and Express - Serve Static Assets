@@ -25,7 +25,7 @@ res.sendFile("/views/index.html"  , { root : __dirname})
  });
 
 /** 4) Serve static assets  */
-app.use(express.static(__dirname + '/public/'))
+app.use("/public", express.static(__dirname + '/public/'))
 app.get("/", function(req, res) {
 res.sendFile("/views/index.html"  , { root : __dirname})
 });
